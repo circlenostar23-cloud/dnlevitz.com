@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0c1626"><title>I tested six AI voices for my podcast for $0.35 · David Levitz</title><meta name="description" content="The free voices on my daily news podcast kept getting stuck, so I tried six paid ones. I ended up keeping the free ones and using a paid one as a backup."><link rel="canonical" href="https://dnlevitz.com/notes/tts-vendor-bake-off/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><script>
+      document.documentElement.classList.add('js');
+    </script><meta property="og:title" content="I tested six AI voices for my podcast for $0.35 · David Levitz"><meta property="og:description" content="The free voices on my daily news podcast kept getting stuck, so I tried six paid ones. I ended up keeping the free ones and using a paid one as a backup."><meta property="og:type" content="website"><meta property="og:url" content="https://dnlevitz.com/notes/tts-vendor-bake-off/"><meta property="og:image" content="https://dnlevitz.com/img/social-card.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="/_astro/Base.lahUR-w8.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="wrap"><a class="site-name" href="/">David Levitz</a><nav aria-label="Main"><a href="/projects/">Projects</a><a href="/notes/" aria-current="page">Notes</a><a href="/about/">About</a></nav></div></header><main id="main"><div class="wrap"><div class="article"><div class="article-main"><p class="eyebrow"><a href="/notes/">Notes</a> · 4 October 2026 · 2 min read</p><h1 style="view-transition-name: title-tts-vendor-bake-off">I tested six AI voices for my podcast for $0.35</h1><p class="lede">The free voices on my daily news podcast kept getting stuck, so I tried six paid ones. I ended up keeping the free ones and using a paid one as a backup.</p><div class="prose"><p>My <a href="/projects/dutch-daily-briefing/">Dutch news podcast</a> is voiced on a free tier of Gemini’s text-to-speech, which allows ten requests a day. In its first week it was slow or stuck on several mornings. I had some credit with OpenRouter, a service that gives access to speech models from several companies through one account, so I wanted to know whether I should just pay for a different voice.</p>
+<h2 id="what-i-tested">What I tested</h2>
+<p>I took 12 lines from a real script, 290 words with both hosts, and ran them through each model. I saved the audio so I could listen to all of them side by side. The whole thing cost about $0.35.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>290 words took</th>
+<th>A full episode would cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gemini Flash TTS</td>
+<td>49 s</td>
+<td>~$0.25</td>
+</tr>
+<tr>
+<td>Microsoft MAI-Voice</td>
+<td>16 s</td>
+<td>~$0.39</td>
+</tr>
+<tr>
+<td>MiniMax Speech HD</td>
+<td>13 s</td>
+<td>~$1.77</td>
+</tr>
+<tr>
+<td>Grok Voice</td>
+<td>21 s</td>
+<td>~$0.27</td>
+</tr>
+<tr>
+<td>Mistral Voxtral</td>
+<td>32 s</td>
+<td>~$0.28</td>
+</tr>
+<tr>
+<td>Deepgram Aura</td>
+<td>61 s</td>
+<td>~$0.53</td>
+</tr>
+</tbody>
+</table>
+<p>A seventh model, Sesame CSM, returned an error, so I dropped it.</p>
+<h2 id="what-i-found">What I found</h2>
+<p>The thing I liked most about my free setup didn’t work through OpenRouter. When I call Gemini directly, it records both hosts in one request, and that’s why they sound like they’re talking to each other. Through OpenRouter, each request takes one piece of text and one voice. I tried passing the two-host settings through anyway, and the whole excerpt came out in one host’s voice, with the other host’s name read out loud.</p>
+<p>Sending one line at a time did work with every other model, and each host kept their own voice. But the hosts no longer react to each other, and I could hear the difference.</p>
+<p>On speed and price, the Microsoft voice looked like the best deal: three times faster than Gemini for about half as much again. Then I listened to them all. I still liked Gemini’s voices best, and even Gemini sounded less natural line by line than it does with both hosts in one request.</p>
+<h2 id="what-i-did">What I did</h2>
+<p>I kept the free voices as the main ones and made the paid route the backup. When a free request fails, only that part of the episode is voiced line by line through OpenRouter, in the same voices, and the next part goes back to the free tier. Behind that there’s a third option with free Microsoft voices.</p>
+<p>I also looked for another model that can do two hosts in one request. I found one that can, but not through OpenRouter, and another that can through OpenRouter at about $2.90 an episode. I haven’t tested that one. I’ll try it if the line-by-line backup ends up being used a lot.</p>
+<h2 id="what-id-tell-someone-doing-the-same">What I’d tell someone doing the same</h2>
+<p>Try the exact feature you care about before comparing anything else. The same model through a different service behaved differently, and I would have missed that from a price list.</p>
+<p>Listen before you decide. The table pointed to one answer and my ears pointed to another.</p>
+<p>It didn’t need to be a big test. Twelve lines and 35 cents answered the question.</p>
+</div></div><nav class="toc" aria-label="On this page"><p class="viz-label">On this page</p><ol><li><a href="#what-i-tested">What I tested</a></li><li><a href="#what-i-found">What I found</a></li><li><a href="#what-i-did">What I did</a></li><li><a href="#what-id-tell-someone-doing-the-same">What I’d tell someone doing the same</a></li></ol></nav><script type="module">var e=[...document.querySelectorAll(`.toc a`)];if(e.length&&`IntersectionObserver`in window){let t=new Map(e.map(e=>[decodeURIComponent(e.hash.slice(1)),e])),n=new IntersectionObserver(n=>{for(let r of n)r.isIntersecting&&(e.forEach(e=>e.removeAttribute(`aria-current`)),t.get(r.target.id)?.setAttribute(`aria-current`,`true`))},{rootMargin:`0px 0px -70% 0px`});t.forEach((e,t)=>{let r=document.getElementById(t);r&&n.observe(r)})}</script></div></div></main><footer class="site-footer"><div class="wrap"><p class="footer-cta">Built something similar or curious how any of this works?<a href="https://www.linkedin.com/in/dnlevitz">Say hello on LinkedIn →</a></p><div class="footer-row"><span>David Levitz · Amsterdam</span><span><a href="/projects/">Projects</a> · <a href="/notes/">Notes</a> · <a href="/about/">About</a> ·<a href="https://github.com/circlenostar23-cloud">GitHub</a></span></div></div></footer><script type="module">var e=matchMedia(`(prefers-reduced-motion: reduce)`).matches,t=`.facts li, .changes > div, .project-card, .small-cards .card, .ladder > div, .gaps > div, .cycle li, .mock-row, .note-list li, .features > div, .flow li`,n=[...document.querySelectorAll(`${t}, .feature, .sample, .ba, .panel, .card.next, .status`)];if(e||document.hidden||!(`IntersectionObserver`in window))n.forEach(e=>e.classList.add(`in`));else{n.forEach(e=>{e.dataset.reveal=``;let n=e.matches(t)?[...e.parentElement.children].indexOf(e):0;e.style.setProperty(`--i`,String(Math.min(n,8)))});let e=(e,t)=>{let n=new IntersectionObserver(e=>{for(let t of e)t.isIntersecting&&(t.target.classList.add(`in`),n.unobserve(t.target))},{rootMargin:t});e.forEach(e=>n.observe(e))};e(n.filter(e=>!e.matches(`.flow li`)),`0px 0px -8% 0px`),e(n.filter(e=>e.matches(`.flow li`)),`0px 0px -30% 0px`)}</script></body></html>
