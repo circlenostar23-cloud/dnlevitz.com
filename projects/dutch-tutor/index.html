@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0c1626"><title>Dutch tutor · David Levitz</title><meta name="description" content="My Dutch textbook is written entirely in Dutch, so I set up an AI agent to tutor me from it. It explains each chapter in English first, quizzes me on the fly, and says the Dutch out loud."><link rel="canonical" href="https://dnlevitz.com/projects/dutch-tutor/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><script>
+      document.documentElement.classList.add('js');
+    </script><meta property="og:title" content="Dutch tutor · David Levitz"><meta property="og:description" content="My Dutch textbook is written entirely in Dutch, so I set up an AI agent to tutor me from it. It explains each chapter in English first, quizzes me on the fly, and says the Dutch out loud."><meta property="og:type" content="website"><meta property="og:url" content="https://dnlevitz.com/projects/dutch-tutor/"><meta property="og:image" content="https://dnlevitz.com/img/social-card.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="/_astro/Base.CPbVnjk3.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="wrap"><a class="site-name" href="/">David Levitz</a><nav aria-label="Main"><a href="/projects/" aria-current="page">Projects</a><a href="/notes/">Notes</a><a href="/about/">About</a></nav></div></header><main id="main"><div class="wrap"><div class="article"><div class="article-main"><p class="eyebrow"><a href="/projects/">Projects</a> · Study tool · an AI agent as tutor</p><h1 style="view-transition-name: title-dutch-tutor">Dutch tutor</h1><p class="lede">My Dutch textbook is written entirely in Dutch, so I set up an AI agent to tutor me from it. It explains each chapter in English first, quizzes me on the fly, and says the Dutch out loud.</p><ul class="facts"><li><strong>18</strong><span>chapters, each with a study guide</span></li><li><strong>2</strong><span>voices, one Dutch and one English</span></li><li><strong>Local</strong><span>speech and transcription run on my Mac</span></li><li><strong>Aug 2026</strong><span>when I started it</span></li></ul><div class="prose numbered"><h2 id="the-problem-i-had">The problem I had</h2>
+<p>I’m learning Dutch from a textbook that’s written entirely in Dutch. I kept needing more English around it: what an exercise was trying to teach me and how a grammar rule works, explained in English before the book went on to teach it in Dutch.</p>
+<p>The layout didn’t help either. The vocabulary lists sit apart from the longer dialogues, so I was constantly flipping back and forth to read one scene.</p>
+<figure class="ba">
+  <div class="ba-row ba-head">
+    <p class="ba-cell before"><span>Before</span> The textbook alone</p>
+    <p class="ba-cell after"><span>After</span> With the study guide</p>
+  </div>
+  <div class="ba-row ba-pair">
+    <div class="ba-cell before"><div><i>1</i><span>Nothing says what the chapter is for</span></div></div>
+    <div class="ba-cell after"><div><i>1</i><span>This chapter: linking two sentences with words like <span lang="nl">en</span>, <span lang="nl">maar</span>, <span lang="nl">want</span> and <span lang="nl">omdat</span>. Some of them change the word order.</span></div></div>
+  </div>
+  <div class="ba-row ba-label">
+    <p class="ba-cell before" lang="nl">Dialoog</p>
+    <p class="ba-cell after" lang="nl">Dialoog</p>
+  </div>
+  <div class="ba-row">
+    <div class="ba-cell before" lang="nl"><p><b>A</b> Ga je mee naar de film?</p><p><b>B</b> Nee, ik blijf thuis, want ik ben moe.</p></div>
+    <div class="ba-cell after" lang="nl"><p><b>A</b> Ga je mee naar de film?</p><p><b>B</b> Nee, ik blijf thuis, want ik ben moe.</p></div>
+  </div>
+  <div class="ba-row ba-pair">
+    <div class="ba-cell before"><div><i>2</i><span>The word list is on another page</span></div></div>
+    <div class="ba-cell after"><div><i>2</i><span><span lang="nl">meegaan</span> to come along · <span lang="nl">moe</span> tired</span></div></div>
+  </div>
+  <div class="ba-row ba-label">
+    <p class="ba-cell before" lang="nl">Grammatica</p>
+    <p class="ba-cell after" lang="nl">Grammatica</p>
+  </div>
+  <div class="ba-row ba-pair">
+    <div class="ba-cell before"><div><i>3</i><span>The rule is only explained in Dutch</span></div></div>
+    <div class="ba-cell after"><div><i>3</i><span>Two ways to say "because". After <span lang="nl">want</span> the verb stays in second place. After <span lang="nl">omdat</span> it moves to the end.</span></div></div>
+  </div>
+  <div class="ba-row">
+    <div class="ba-cell before" lang="nl"><p>Na <i>omdat</i> staat het werkwoord aan het eind.</p><p>Ik blijf thuis, want ik <mark>ben</mark> moe.</p><p>Ik blijf thuis omdat ik moe <mark>ben</mark>.</p></div>
+    <div class="ba-cell after" lang="nl"><p>Na <i>omdat</i> staat het werkwoord aan het eind.</p><p>Ik blijf thuis, want ik <mark>ben</mark> moe.</p><p>Ik blijf thuis omdat ik moe <mark>ben</mark>.</p></div>
+  </div>
+  <div class="ba-row ba-label">
+    <p class="ba-cell before" lang="nl">Opdracht</p>
+    <p class="ba-cell after" lang="nl">Opdracht</p>
+  </div>
+  <div class="ba-row ba-pair">
+    <div class="ba-cell before"><div><i>4</i><span>No hint what it's practicing</span></div></div>
+    <div class="ba-cell after"><div><i>4</i><span>Practices: moving the verb to the end after <span lang="nl">omdat</span></span></div></div>
+  </div>
+  <div class="ba-row">
+    <div class="ba-cell before" lang="nl"><p>Maak de zin af met <i>omdat</i>.</p><p>Ik ga niet mee, want ik heb geen tijd.<br />→ Ik ga niet mee omdat …</p></div>
+    <div class="ba-cell after" lang="nl"><p>Maak de zin af met <i>omdat</i>.</p><p>Ik ga niet mee, want ik heb geen tijd.<br />→ Ik ga niet mee omdat …</p></div>
+  </div>
+  <figcaption>An example written for this page, not taken from the book.</figcaption>
+</figure>
+<h2 id="how-i-went-about-it">How I went about it</h2>
+<p>I didn’t want a chatbot that knows Dutch in general. I wanted a tutor that knows my book: which chapter I’m on, which words I’ve had, and what the dialogue in that chapter says. So the first job was getting my course material into text files an AI agent can read.</p>
+<p>Two rules were there from the start. A guide opens in English, with what the chapter is trying to teach, before any Dutch. And the agent keeps the book’s text apart from anything it wrote. The course word list is sometimes loose: it gives <em>mankeren</em> as “to be wrong”, when it means something is the matter. In cases like that the tutor shows both.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>It isn’t one pipeline. The study guides are the main piece, and a couple of features sit around them.</p>
+<div class="panel">
+  <span class="viz-label">The main piece</span>
+  <h3>Study guides</h3>
+  <p>Every chapter has one. Making a guide is the only part that runs as a sequence:</p>
+  <ol class="flow">
+    <li data-icon="folder"><strong>Collect</strong><span>My photos of the chapter's textbook pages, plus the dialogue audio and exercise questions from the course website, go into one folder.</span></li>
+    <li data-icon="wave"><strong>Transcribe</strong><span>The dialogue audio is transcribed on my Mac and then corrected against the book.</span></li>
+    <li data-icon="translate"><strong>Gloss</strong><span>The dialogue is split into chunks, and each chunk gets its vocabulary.</span></li>
+    <li data-icon="book"><strong>Write the guide</strong><span>What the chapter teaches, the grammar in English, a listening review, and the exercises without the answers.</span></li>
+  </ol>
+</div>
+<div class="features">
+  <span class="viz-label">Around the guides</span>
+  <div data-icon="mic"><h3>Voice mode</h3><p>When I switch it on, the tutor speaks. For a scene from the book it plays the course's own recording. For a single word or phrase it says the Dutch in a Dutch voice and then explains it in an English one. Both voices are open-source models that run on my Mac, so the speech costs nothing.</p></div>
+  <div data-icon="chat"><h3>Practice on the fly</h3><p>I can ask for a quiz or a few more exercises on whatever I'm stuck on. The agent has the whole book, so it can keep to the words and grammar I've covered.</p></div>
+</div>
+<h2 id="what-i-changed-along-the-way">What I changed along the way</h2>
+<div class="changes">
+  <div><h3>Guides that guessed at the chapter</h3><p>The first guides worked from the website's audio and exercises and had to approximate what the chapter was about. Now my photos of the textbook pages go in at the start, so a guide follows the book itself.</p></div>
+  <div><h3>Hints that gave the answer away</h3><p>Exercise walkthroughs now explain the grammar and the pattern, but not the answer. The official answers sit in their own labeled section.</p></div>
+  <div><h3>Reading Dutch without hearing it</h3><p>A few days in I added voice mode, so I can ask how a word or a line sounds.</p></div>
+</div>
+<h2 id="how-its-worked-out">How it’s worked out</h2>
+<p>The English context was what I was missing, and having it in front of each chapter makes the Dutch explanations much easier to follow. Not flipping between a dialogue and its word list is a small change that I notice every time.</p>
+<p>The part I didn’t plan for is how useful it is to ask for practice on the fly. Because the agent has the whole book, I can ask for a quick quiz or a few extra exercises on whatever I’m stuck on, and they stay within the words and grammar I’ve covered.</p>
+<p>The code isn’t public because the same repository holds the course material, which isn’t mine to share.</p>
+</div><p class="meta">Last updated 16 October 2026. </p><a class="card next" href="/projects/dutch-daily-briefing/"><p class="eyebrow">Next project</p><h3>Dutch Daily Briefing</h3><p>A two-host English podcast about Dutch news that I built for myself. A chain of AI steps picks the stories from mostly Dutch-language outlets, writes them up in English, checks the facts and records the episode before I wake up.</p></a></div><nav class="toc" aria-label="On this page"><p class="viz-label">On this page</p><ol><li><a href="#the-problem-i-had">The problem I had</a></li><li><a href="#how-i-went-about-it">How I went about it</a></li><li><a href="#how-it-works">How it works</a></li><li><a href="#what-i-changed-along-the-way">What I changed along the way</a></li><li><a href="#how-its-worked-out">How it’s worked out</a></li></ol></nav><script type="module">var e=[...document.querySelectorAll(`.toc a`)];if(e.length&&`IntersectionObserver`in window){let t=new Map(e.map(e=>[decodeURIComponent(e.hash.slice(1)),e])),n=new IntersectionObserver(n=>{for(let r of n)r.isIntersecting&&(e.forEach(e=>e.removeAttribute(`aria-current`)),t.get(r.target.id)?.setAttribute(`aria-current`,`true`))},{rootMargin:`0px 0px -70% 0px`});t.forEach((e,t)=>{let r=document.getElementById(t);r&&n.observe(r)})}</script></div></div></main><footer class="site-footer"><div class="wrap"><p class="footer-cta">Built something similar or curious how any of this works?<a href="https://www.linkedin.com/in/dnlevitz">Say hello on LinkedIn →</a></p><div class="footer-row"><span>David Levitz · Amsterdam</span><span><a href="/projects/">Projects</a> · <a href="/notes/">Notes</a> · <a href="/about/">About</a> ·<a href="https://github.com/circlenostar23-cloud">GitHub</a></span></div></div></footer><script type="module">var e=matchMedia(`(prefers-reduced-motion: reduce)`).matches,t=`.facts li, .changes > div, .project-card, .small-cards .card, .ladder > div, .gaps > div, .cycle li, .mock-row, .note-list li, .features > div, .flow li`,n=[...document.querySelectorAll(`${t}, .feature, .sample, .ba, .panel, .card.next, .status`)];if(e||document.hidden||!(`IntersectionObserver`in window))n.forEach(e=>e.classList.add(`in`));else{n.forEach(e=>{e.dataset.reveal=``;let n=e.matches(t)?[...e.parentElement.children].indexOf(e):0;e.style.setProperty(`--i`,String(Math.min(n,8)))});let e=(e,t)=>{let n=new IntersectionObserver(e=>{for(let t of e)t.isIntersecting&&(t.target.classList.add(`in`),n.unobserve(t.target))},{rootMargin:t});e.forEach(e=>n.observe(e))};e(n.filter(e=>!e.matches(`.flow li`)),`0px 0px -8% 0px`),e(n.filter(e=>e.matches(`.flow li`)),`0px 0px -30% 0px`)}</script></body></html>
