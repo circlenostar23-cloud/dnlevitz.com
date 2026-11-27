@@ -1,0 +1,1 @@
+import"./sync.CRkkrRcc.js";for(let e of document.querySelectorAll(`.fa`)){let t=e.querySelector(`.fa-now`);for(let n of e.querySelectorAll(`.fa-day[data-head]`))n.querySelector(`audio`).addEventListener(`play`,()=>t.textContent=n.dataset.head)}
